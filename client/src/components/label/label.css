@@ -1,0 +1,34 @@
+.label {
+  margin-right: 10px;
+  display: inline-block;
+  min-width: 50px;
+  text-align: center;
+  font-size: 0.8em;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.up {
+  color: var(--up-text-color);
+  background: var(--up-bg-color);
+}
+
+.aapl {
+  background: var(--apple-bg-color);
+}
+.googl {
+  background: var(--google-bg-color);
+}
+.msft {
+  background: var(--microsoft-bg-color);
+}
+.amzn {
+  background: var(--amazon-bg-color);
+}
+.fb {
+  background: var(--facebook-bg-color);
+}
+.tsla {
+  background: var(--tesla-bg-color);
+}

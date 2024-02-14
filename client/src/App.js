@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from 'react';
+import io from 'socket.io-client';
+import { API_URL } from './api/local-api';
+import './styles/app.css';
+import { useDispatch } from 'react-redux';
+import { connect, disconnect } from './store/reducers/socket/socket-slice';
+import Shares from './feature/shares/shares';
+import Search from './feature/search/search';
+import Favorites from './feature/favorites/favorites';
+import Settings from './feature/settings/settings';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    const socket = io.connect(API_URL);
+    dispatch(connect(socket));
+    return () => {
+      socket.disconnect();
+      dispatch(disconnect());
+    };
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="app">
+      <section className="app-top-bar">
+        <Search />
+        <Favorites />
+        <Settings />
+      </section>
+      <Shares />
+    </main>
   );
 }
 

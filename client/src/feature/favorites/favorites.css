@@ -1,0 +1,14 @@
+.favorites {
+  position: relative;
+}
+
+.favorites span {
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  background: var(--google-bg-color);
+  color: var(--same-bg-color);
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 0.8em;
+}

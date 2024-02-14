@@ -1,0 +1,65 @@
+.ticker-container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  flex: 1 1 auto;
+}
+
+.ticker-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+.ticker-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.ticker-container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.ticker-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.ticker-container .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 7px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 375px) {
+  .checkmark {
+    height: 22px;
+    right: -8px;
+  }
+}

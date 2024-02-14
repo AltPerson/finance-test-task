@@ -1,0 +1,87 @@
+.item-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.item-container__numbers,
+.numbers-price,
+.numbers-dividend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.numbers-price span,
+.numbers-dividend span {
+  flex: 1 1 auto;
+  text-align: right;
+  font-weight: 600;
+}
+
+.item-container__numbers .numbers-price span:first-child,
+.numbers-dividend span:first-child {
+  font-weight: 500;
+}
+
+.item-container__numbers span:nth-child(2) {
+  min-width: 80px;
+}
+
+.item-container__numbers div {
+  padding: 5px;
+  text-align: right;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.change-same {
+  color: var(--same-text-color);
+}
+
+.change-down {
+  color: var(--down-text-color);
+}
+
+.change-up {
+  color: var(--up-text-color);
+}
+
+.same {
+  color: var(--same-text-color);
+  background: var(--same-bg-color);
+}
+
+.down {
+  color: var(--down-text-color);
+  background: var(--down-bg-color);
+}
+
+.down span {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .item-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 625px) {
+  .item-container__numbers {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

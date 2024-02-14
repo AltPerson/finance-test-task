@@ -1,0 +1,21 @@
+.shares {
+  width: 100%;
+}
+
+.list {
+  list-style: none;
+}
+
+.list__item {
+  border-top: 1px solid #e8eaed;
+}
+
+.list__item:first-child {
+  border-top: none;
+}
+
+.item_empty {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.3em;
+}

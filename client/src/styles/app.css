@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Google Sans', Roboto, Arial, sans-serif;
+  font-size: 14px;
+  color: #202124;
+}
+
+:root {
+  --up-text-color: rgb(19, 115, 51);
+  --up-bg-color: rgb(230, 244, 234);
+  --down-text-color: rgb(165, 14, 14);
+  --down-bg-color: rgb(252, 232, 230);
+  --same-text-color: #3c4043;
+  --same-bg-color: #e8eaed;
+  --apple-bg-color: #666666;
+  --google-bg-color: #4285f4;
+  --microsoft-bg-color: #737373;
+  --amazon-bg-color: #c26c03;
+  --facebook-bg-color: #d55e00;
+  --tesla-bg-color: #e31937;
+}
+
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.app-top-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
